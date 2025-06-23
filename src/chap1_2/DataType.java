@@ -11,7 +11,7 @@ public class DataType {
         boolean flag = true;
 
         // 정수타입
-        // (byte, short, int, long)
+        // (byte - 1, short - 2, int - 4, long)
         // 1byte = 8bit -> 10진수 정수 8 => 00001000
         // 128 ~ 127
         // 2byte = 16bit -> 10진수 정수 1000=>1111101000
