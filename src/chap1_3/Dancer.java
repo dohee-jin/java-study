@@ -38,9 +38,38 @@ public class Dancer {
         danceLevel = 1;
     }
 
-    /*public static void main(String[] args){
-        Dancer dancer = new Dancer();
+    // 생성자 오버로딩: 생성자는 여러개 만들 수 있음
+    // 규칙: 파라미터가 달라야 함
+    Dancer(String dName) {
+        System.out.println("댄서의 2번 생성자 호출");
+        dancerName = dName;
+        crewName= "똥크루";
+        genres = new String[] {"힙합"};
+        danceLevel = 3;
+    }
 
-    }*/
+    Dancer(String dName, String cName) {
+        System.out.println("댄서의 3번 생성자 호출");
+        dancerName = dName;
+        crewName= cName;
+        genres = null;
+        danceLevel = 2;
+    }
+
+    Dancer(String dName, String cName, String... settingGenres) {
+        System.out.println("4번 생성자 호출!");
+        dancerName = dName;
+        crewName= cName;
+        genres = settingGenres;
+        danceLevel = 5;
+    }
+    // ...는 맨 마지막에 사용, [] 으로 받으면 원래 위치에 작성
+    Dancer(String dName, String cName, String[] settingGenres, int dLevel) {
+        System.out.println("4번 생성자 호출!");
+        dancerName = dName;
+        crewName= cName;
+        genres = settingGenres;
+        danceLevel = dLevel;
+    }
 }
 

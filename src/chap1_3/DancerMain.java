@@ -22,8 +22,7 @@ public class DancerMain {
             }
         */
 
-        Dancer taro = new Dancer();
-
+        Dancer park = new Dancer();
         // 포인터로 주소값을 출력
         /*System.out.println(taro); */
 
@@ -32,6 +31,19 @@ public class DancerMain {
         taro.crewName = "riize";
         */
 
+        park.introduce();
+
+        Dancer pororo = new Dancer("뽀로로");
+        pororo.introduce();
+
+        Dancer heartPing = new Dancer("하츄핑", "티니핑");
+        heartPing.introduce();
+
+        Dancer taro = new Dancer("타로", "라이즈", "힙합", "크럼프", "왁킹");
         taro.introduce();
+
+        String[] genres = {"힙합", "크럼프", "왁킹"};
+        Dancer osaki = new Dancer("타로롱", "라이즈", genres, 1000);
+        osaki.introduce();
     }
 }
