@@ -1,4 +1,4 @@
-package chap1_3.arrayList;
+package chap1_3.arrayList; // 자바는 하위 폴더를(패키지) .패키지 로 표시함
 
 public class ListMain {
     public static void main(String[] args) {
