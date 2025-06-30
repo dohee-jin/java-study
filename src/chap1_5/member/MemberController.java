@@ -38,11 +38,11 @@ public class MemberController {
                 break;
 
             case "3":
-                System.out.println("개별 회원 조회!");
+                showDetailMembers();
                 break;
 
             case "4":
-                System.out.println("회원 정보 수정!");
+                changePassword();
                 break;
 
             case "5":
@@ -62,6 +62,38 @@ public class MemberController {
         } // end switch
 
         prompt("====== 계속하시려면 Enter... ====== \n");
+    }
+
+    Member findMember(String message) {
+        String email = prompt("#%s 대상의 이메일: ".formatted(message));
+        return mr.findMemberByEmail(email);
+    }
+
+    void changePassword() {
+        System.out.println("\n# 회원 정보의 패스워드를 수정합니다.");
+        Member foundMember = findMember("수정");
+
+        if(foundMember != null){
+            // 개별정보 출력
+            String newPassword = prompt("# 새 비밀번호");
+
+            // 실질적인 데이터 수정 처리
+//            foundMember.updateNewPassword(newPassowrd);
+        } else {
+            System.out.println("\n조회 결과가 없습니다.");
+        }
+    }
+
+    void showDetailMembers() {
+        System.out.println("\n개별 회원을 조회합니다.");
+        Member foundMember = findMember("조회");
+
+        if(foundMember != null){
+            // 개별정보 출력
+            foundMember.inform();
+        } else {
+            System.out.println("\n조회 결과가 없습니다.");
+        }
     }
 
     void signUp() {
@@ -107,13 +139,14 @@ public class MemberController {
         }
     }
 
-    void showAllMembers(String x) {
+    void showAllMembers(String user) {
         System.out.println("\n전체 회원 정보를 조회합니다.");
         Member[] members = mr.getMembers();
         for (Member member : members) {
             member.inform();
         }
     }
+
 
 
     /**
