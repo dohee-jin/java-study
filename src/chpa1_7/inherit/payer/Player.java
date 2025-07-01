@@ -1,7 +1,9 @@
 package chpa1_7.inherit.payer;
 
 // 상속을 위해 공통 속성과 공통 기능을 가진 부모 클래스(super class)
-public class Player {
+// 클래스는 java.lang.Object를 자동적으로 상속하고 있음
+// Object는 모든 클래스의 부모
+public class Player /*extends Object*/{
 
     // 필드
     String nickName;
@@ -10,6 +12,9 @@ public class Player {
     int rage;
     int exp;
 
+    /*public Player() {
+       // 자바빈에서는 기본 생성자를 사용자가 직접 사용하게 하고 있음
+    }*/
     public Player(String nickName, int hp) {
         this.nickName = nickName;
         this.level = 1;

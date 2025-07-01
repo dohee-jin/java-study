@@ -1,5 +1,12 @@
 package chpa1_7.inherit.payer;
 
+
+/*
+    Object
+      |
+    Player
+
+*/
 public class Main {
     public static void main(String[] args) {
         Warrior warrior = new Warrior("주차왕파킹");
