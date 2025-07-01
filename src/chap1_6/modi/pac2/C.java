@@ -1,3 +1,4 @@
+/*
 package chap1_6.modi.pac2;
 
 import chap1_6.modi.pac1.A;
@@ -18,3 +19,4 @@ public class C {
         a.m3();
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package chap1_6.modi.pac1;
 
 // A클래스와 같은 패키지
@@ -17,3 +18,4 @@ class B {
         a.m3();
     }
 }
+*/
