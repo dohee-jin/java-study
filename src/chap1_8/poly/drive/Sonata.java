@@ -7,4 +7,7 @@ public class Sonata extends Car {
         System.out.println("소나타가 달립니다.");
     }
 
+    public void joinHyundaiMembership() {
+        System.out.println("현대자동차 멤버쉽에 가입합니다.");
+    }
 }

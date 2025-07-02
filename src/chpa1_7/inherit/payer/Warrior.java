@@ -23,8 +23,8 @@ public class Warrior extends Player {
         System.out.println("# 분노: " + this.rage);
     }
 
-    void dash() {
-        System.out.printf("%s님이 돌진합니다.\n", this.nickName);
+    void dash(Player player) {
+        System.out.printf("%s님이 %s님에게 돌진합니다.\n", this.nickName, player.nickName);
     }
 
 

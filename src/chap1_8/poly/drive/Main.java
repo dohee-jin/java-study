@@ -6,13 +6,13 @@ public class Main {
         Tesla t2 = new Tesla();
         Tesla t3 = new Tesla();
 
-        Car s1 = new Sonata();
-        Car s2 = new Sonata();
-        Car s3 = new Sonata();
+        Sonata s1 = new Sonata();
+        Sonata s2 = new Sonata();
+        Sonata s3 = new Sonata();
 
-        Car m1 = new Mustang();
-        Car m2 = new Mustang();
-        Car m3 = new Mustang();
+        Mustang m1 = new Mustang();
+        Mustang m2 = new Mustang();
+        Mustang m3 = new Mustang();
 
         Car[] cars = {t1, t2, t3, s1, s2, s3, m1, m2, m3};
 
@@ -22,6 +22,14 @@ public class Main {
 
         // 이종모음은 원칙적으로 불가하지만 다형성을 이용하여 이종모음을 구현할 수 있다.
         Object[] arr = {1, "adfd", false, new Sonata()};
+
+        Driver heartping = new Driver("하츄핑");
+        heartping.drive(m1);
+
+        System.out.println("===============");
+
+        Car car2 = new CarShop().exportCar(3000);
+        car2.accelerate();
 
     }
 }
