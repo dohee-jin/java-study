@@ -1,5 +1,7 @@
 package chap1_5.member;
 
+import static chap1_5.member.Member.Gender.*;
+
 // 회원들의 CRUD를 담당하는 창고(데이터베이스) 역할
 public class MemberRepository {
 
@@ -11,9 +13,9 @@ public class MemberRepository {
 
     MemberRepository() {
         memberList  = new Member[] {
-                new Member("abcd@123.com" , "1234", "콩벌레", Member.Gender.MALE, 30),
-                new Member("abcd@123saa.com" , "1234", "턱돌이", Member.Gender.MALE, 30),
-                new Member("abcd@123ㅇㅇ.com" , "ㄴ1234", "동글이", Member.Gender.FEMALE, 30)
+                new Member("abcd@123.com" , "1234", "콩벌레", MALE, 30),
+                new Member("abcd@123saa.com" , "1234", "턱돌이", MALE, 30),
+                new Member("abcd@123ㅇㅇ.com" , "ㄴ1234", "동글이", FEMALE, 30)
         };
 
     }
