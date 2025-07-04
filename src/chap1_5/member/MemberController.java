@@ -1,6 +1,10 @@
 package chap1_5.member;
 
+import chap1_9.static_.util.InputUtils;
+
 import java.util.Scanner;
+
+import static chap1_9.static_.util.InputUtils.*;
 
 // 역할: 회원관리 앱의 입출력을 담당
 public class MemberController {
@@ -8,11 +12,11 @@ public class MemberController {
     // 객체의 협력과 위임
     // 필드: 클래스의 속성 - 부품 속성
     MemberRepository mr; // 의존 관계
-    Scanner sc;
+//    Scanner sc;
 
     MemberController() {
         mr = new MemberRepository();
-        sc = new Scanner(System.in);
+//        sc = new Scanner(System.in);
     }
 
 
@@ -102,7 +106,7 @@ public class MemberController {
         String password = prompt("# 패스워드: ");
         String memberName = prompt("# 이름: ");
         Member.Gender genderStr = inputCorrectGender();
-        String ageStr = prompt("# 나이: ");
+        int ageStr = promptNumber("# 나이: ");
 
         // 회원 배열에 추가
         mr.addMember(new Member(
@@ -110,7 +114,7 @@ public class MemberController {
                 password,
                 memberName,
                 genderStr,
-                Integer.parseInt(ageStr)
+                ageStr
         ));
 
     }
@@ -135,6 +139,7 @@ public class MemberController {
                     return Member.Gender.FEMALE;
                 default:
                     System.out.println("성별을 M 또는 F로 입력해주세요");
+                    break;
             }
         }
     }
@@ -170,8 +175,8 @@ public class MemberController {
     }
 
     //
-    String prompt(String message) {
+    /*String prompt(String message) {
         System.out.print(message);
         return sc.nextLine();
-    }
+    }*/
 }
