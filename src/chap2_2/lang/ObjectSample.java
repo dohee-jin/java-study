@@ -40,14 +40,14 @@ class Pen {
         return false;
     }*/
 
-    /*@Override
+    @Override
     public String toString() {
         return "Pen{" +
                 "serial=" + serial +
                 ", color='" + color + '\'' +
                 ", price=" + price +
                 '}';
-    }*/
+    }
 }
 
 public class ObjectSample {
