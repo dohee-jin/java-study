@@ -6,30 +6,30 @@ import java.util.Arrays;
 public class StringList {
 
     // 필드
-    String[] values;
+    private String[] values;
 
     // 생성자
-    StringList() {
+    /*public StringList() {
         values = new String[0];
-    }
+    }*/
 
     // 생성자 오버로딩
-    StringList(String... items) {
+    public StringList(String... items) {
         values = items;
     }
 
     // 메서드
-    boolean isOutOfBounds(int index) {
+    public boolean isOutOfBounds(int index) {
         System.out.println("인덱스의 범위가 잘못되었습니다.");
         return index < 0 || index >= values.length;
     }
 
-    void modify(int index, String item) {
+    public void modify(int index, String item) {
         if (isOutOfBounds(index)) return;
         values[index] = item;
     }
 
-    void insert(int index, String item) {
+    public void insert(int index, String item) {
         if (isOutOfBounds(index)) return;
         String[] temp = copy(1);
         for (int i = values.length; i > index; i--) {
@@ -39,7 +39,7 @@ public class StringList {
         values = temp;
     }
 
-    String pop() {
+    public String pop() {
         if (values.length == 0) {
             System.out.println("제거할 대상이 없습니다.");
             return null;
@@ -50,7 +50,7 @@ public class StringList {
         return deleted;
     }
 
-    int indexOf(String item) {
+    public int indexOf(String item) {
         for (int i = 0; i < values.length; i++) {
             if (values[i].equals(item)) {
                 return i;
@@ -63,7 +63,7 @@ public class StringList {
         return Arrays.toString(values);
     }
 
-    String[] copy(int capacity) {
+    private String[] copy(int capacity) {
         String[] tempArray = new String[values.length + capacity];
 
         // 루프 회전수는 사이즈를 늘릴 때는 원본만큼
@@ -75,7 +75,7 @@ public class StringList {
         return tempArray;
     }
 
-    void push(String... items) {
+    public void push(String... items) {
         // 1. 사이즈가 1개 더 큰 배열을 생성
         // 2. 원본 내용을 복사
         String[] temp = copy(items.length);
@@ -89,7 +89,7 @@ public class StringList {
     }
 
     // 배열 저장값으로 찾아서 삭제
-    void remove(String targetItem) {
+    public void remove(String targetItem) {
 
         if (!include(targetItem)) return;
 
