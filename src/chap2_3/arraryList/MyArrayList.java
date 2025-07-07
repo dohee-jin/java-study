@@ -1,6 +1,7 @@
 package chap2_3.arraryList;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class MyArrayList<T> {
 
@@ -135,5 +136,7 @@ public class MyArrayList<T> {
 
         return formatted;
     }
+
+
 
 }
