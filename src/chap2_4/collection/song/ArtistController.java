@@ -19,6 +19,7 @@ public class ArtistController {
 
     public void start() {
 
+        repository.load();
 
         while (true) {
             System.out.println("\n\n****** 음악 관리 프로그램 ******");
@@ -93,6 +94,9 @@ public class ArtistController {
                 System.out.printf("\n# [%s] 곡은 이미 추가된 곡입니다.\n", song);
             }
         }
+
+        // 가수 등록시 자동 세이브 파일 저장
+        repository.save();
     }
 
     // 2번 메뉴 선택
