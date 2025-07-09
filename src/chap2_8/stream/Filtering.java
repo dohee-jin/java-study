@@ -1,11 +1,9 @@
-package chap2_7.chap2_8.stream;
+package chap2_8.stream;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static chap2_7.chap2_8.stream.Menu.menuList;
+import static chap2_8.stream.Menu.menuList;
 
 public class Filtering {
     public static void main(String[] args) {

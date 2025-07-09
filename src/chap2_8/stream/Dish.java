@@ -1,4 +1,4 @@
-package chap2_7.chap2_8.stream;
+package chap2_8.stream;
 
 import java.util.Objects;
 
