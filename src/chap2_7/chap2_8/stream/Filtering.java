@@ -40,9 +40,12 @@ public class Filtering {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 66, 7, 9, 10, 20, 22, 21);
 
         // 숫자리스트에서 짝수만 필터링
-        numbers.stream()
+        List<Integer> evenNumbers = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .distinct() // 중복제거
-                .collect(Collectors.toList())
+                .collect(Collectors.toList());
+
+        System.out.println("evenNumbers = " + evenNumbers);
+
     }
 }
