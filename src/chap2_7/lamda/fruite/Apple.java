@@ -46,4 +46,9 @@ public class Apple {
                 ", color=" + color +
                 '}';
     }
+
+    // 색상의 첫글자만 추출해서 반환하는 메소드
+    public char getColorFirstCharacter() {
+        return this.color.toString().charAt(0);
+    }
 }
